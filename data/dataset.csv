@@ -1,0 +1,6 @@
+entry_text,failure_type,resolution
+"500 error on /login endpoint under high traffic","SERVER_CRASH","Restart the auth microservice and scale up instances during peak hours."
+"Repeated 429 errors from EU IPs on /search","RATE_LIMITED","Increase rate limit for EU region or implement exponential backoff in clients."
+"403 error when accessing /admin with valid token","AUTH_FAILURE","Check token scope and permission mapping on RBAC service."
+"Timeout on /inventory during sync operation","TIMEOUT","Investigate backend sync job for latency and split into smaller tasks if needed."
+"Invalid payload causing 400 error on /submit","CLIENT_ERROR","Validate payload schema on client before sending request."
